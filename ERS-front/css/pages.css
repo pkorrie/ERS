@@ -1,0 +1,131 @@
+
+
+#navbar{
+    background-color: #2E0A36;   /* 2D0937 */
+   
+}
+#navBrand{
+    color: #F3CA5E;
+    font-size: 2.25rem;
+}
+
+#home{
+    color: aliceblue;
+    
+}
+.icon{
+    color: aliceblue;
+    font-size: 2rem;
+}
+.navbar-nav{
+    margin-right: 5%;
+}
+
+.nav-item{
+    padding-right: 15px;
+}
+
+.pop{
+    display: none;
+}
+#person:hover + span{
+    display: block;
+}
+
+#data{
+    color: #2E0A36;
+}
+.btnn{
+    display: inline-block;
+  position: relative;
+  color: #0087ca;
+  margin-top: 3rem;
+  margin-left: -1rem;
+}
+
+.btnn:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #F3CA5E;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .btnn:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  @media (max-width: 540px){
+    .btnn {
+        display: block;
+    }
+}
+
+    .form-group {
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+
+  form{
+    margin-top: 5%;
+  }
+
+  .form-control{
+    border: 2px solid #F3CA5E;
+  }
+ #send, #send1{
+    padding: 6px 12px;
+    margin-left: 46%;
+    margin-top: 2%;
+    background-color: #2E0A36;
+ }
+ #update-button{
+    padding: 6px 12px;
+    margin-left: 46%;
+    background-color: #2E0A36;
+
+ }
+
+ @media all and (max-width:30em){
+     .btnn{
+        display: block;
+        margin: 0.4em auto;
+    }
+}
+
+@media (min-width: 200px){
+    .navbar-expand-lg .navbar-nav {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+}
+
+#modal-top{
+    margin-top: 0%;
+}
+.table td, .table th{
+    border-top: none;
+    border-style: none;
+}
+
+
+
+.form-floating {
+    margin-bottom: 15px;
+}
+
+#card1{
+    padding: 3.25rem;
+}
+
+#inputGroupSelect01{
+    border: 2px solid #F3CA5E;
+}

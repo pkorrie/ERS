@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">        
+      <link rel="stylesheet" href="/css/pages.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+   </head>
+
+    <body>
+        <nav class="navbar navbar-expand sticky-top" id= "navbar">
+            <a class="navbar-brand" id="navBrand" href="employee.html">ERS</a>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <a class=" icon" id="person" href="#bd-example-modal-lg" role="button" data-toggle="modal" data-target=".bd-example-modal-lg" data-trigger="focus" title="Account"><i class="bi bi-person"></i></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class=" icon" href="login.html" id="logout" role="button" data-toggle="popover" data-trigger="focus" title="Logout"><i class="bi bi-box-arrow-right"></i></a>
+                  </li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+
+          <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="myLargeModalLabel">Update Account</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form id="modal-top">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-6">
+                          <a>First Name</a>
+                          <div class="form-floating">
+                          <input type="name" class="form-control" id="floatingInput1" aria-describedby="usernameHelp" placeholder="john">
+                          <label for="floatingInput1" id="fName"> </label>
+                        </div>
+
+                        <a>Email</a>
+                        <div class="form-floating">
+                          <input type="email" class="form-control" id="floatingInput2" aria-describedby="usernameHelp" placeholder="john123@email.com">
+                          <label for="floatingInput2" id="email2">Email</label>
+                        </div>
+
+                        <a>Password</a>
+                        <div class="form-floating">  
+                          <input type="password" class="form-control" id="floatingInput3" placeholder="Password">
+                          <label for="floatingInput3" id="password2">Password</label>
+                        </div>
+                      </div>
+
+                      <div class="col-6">
+                        <a>Last Name</a>
+                          <div class="form-floating">
+                              <input type="name" class="form-control" id="floatingInput4" aria-describedby="usernameHelp" placeholder="Doe">
+                              <label for="floatingInput4" id="lName" > </label>
+                          </div>
+
+                          <a>Username</a>
+                          <div class="form-floating">
+                            <input type="username" class="form-control" id="floatingInput5" aria-describedby="usernameHelp" placeholder="john123">
+                            <label for="floatingInput5" id="username2" > </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  <button type="submit" id="update-button" class="btn btn-primary" id="send">Update</i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+            <div class="col">
+                <div>
+                    <a class="col-4 btn btnn" id="optt1" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapseWidthExample1">
+                      MAKE A REQUEST
+                    </a>
+                    <a class="col-4 btn btnn" id="optt2" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapseWidthExample2">
+                        PENDING REQUESTS
+                      </a>
+                      <a class="col-4 btn btnn" id="optt3" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapseWidthExample3">
+                        RESOLVED REQUESTS
+                      </a>
+                    </div>
+                  <div>
+                    <div class="collapse show" id="collapse1">
+                      <div class="card card-body" id="card1" >
+                        <form enctype="multipart/form-data" id="register-form" onsubmit="return false">
+                          <div class="form-group">
+                            <div class="row">
+                                <div class="col-6">
+                                  <div class="input-group mb-3">
+                                    <span class="input-group-text">$</span>
+                                    <input type="text" class="form-control" id="reimb-amount" aria-label="Dollar amount (with dot and two decimal places)" placeholder="0.00">
+                                  </div>
+                              
+                                    <div class="input-group mb-3">
+                                      <label class="input-group-text" for="inputGroupSelect01">Type</label>
+                                      <select class="form-select" id="inputGroupSelect01">
+                                        <option value="1">LOGING</option>
+                                        <option value="2">TRAVEL</option>
+                                        <option value="3">FOOD</option>
+                                        <option value="4">OTHERS</option>
+                                      </select>
+                                    </div>                                  
+                                </div>
+                                <div class="col-6">
+                                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="3" placeholder="Desciption..."></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="send1">Submit</i></button>
+                          </div>
+                        </form>
+                        <div id="error"> </div>
+                        <div id="suss"> </div>
+                      </div>
+                  </div>
+
+                  <div class="collapse" id="collapse2">
+                    <div class="card card-body" >
+                      <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Type</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Submited</th>
+                            
+                          </tr>
+                        </thead>
+                        <tbody id="pendingData">
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div class="collapse" id="collapse3">
+                    <div class="card card-body" >
+                      <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Type</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Submited</th>
+                            <th scope="col">Resolved</th>
+                            <th scope="col">Resolver</th>
+                            <th scope="col">Status</th>
+                          </tr>
+                        </thead>
+                        <tbody id="resolvedData">
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+              </div>
+            </div>
+
+          
+
+
+            <form action="https://formspree.io/f/mnqlegbd" method="POST">
+                <h5 class="text-center"> FeedBack</h5>
+                <h6 class="section-subheading text-muted text-center">Let us know how it went!</h6>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-6">
+                                <label class="col-6" for="exampleFormControlInput1">Email address</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="_replyto">
+                                <label class="col-6" for="exampleFormControlInput2">Name</label>
+                                <input type="name" class="form-control" id="exampleFormControlInput2" placeholder="John Doe" name="_replyto">
+                            </div>
+                        
+                            <div class="col-6">
+                                <label for="exampleFormControlTextarea1">Your message:</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="message"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="send">Send <i class="bi bi-send"></i></button>
+                       </div>
+                    </div>
+            </form>
+            
+
+        </main>
+        <script src="/js/emp.js"></script>
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
+    </body>
+</html>
